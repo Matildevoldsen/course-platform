@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\VerifyEmail;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterUserController extends Controller
 {
@@ -27,12 +30,34 @@ class RegisterUserController extends Controller
         ]);
 
         if ($user) {
+            Mail::send(new VerifyEmail($user));
+
             return response()->json(['data' => [
                 'success' => true,
             ]]);
         } else {
             return response()->json(['errors' => [
                 'root' => 'Cannot create user.'
+            ]]);
+        }
+    }
+
+    public function verify(Request $request)
+    {
+        $request->validate([
+            'id' => 'required',
+            'token' => 'required'
+        ]);
+
+        $user = User::find($request->id);
+        if ($user && $request->token == $user->email_verification_code) {
+            $user->email_verified_at = now();
+            $user->email_verification_code = md5(rand(0, 6));
+
+            $user->save();
+
+            return response()->json(['data' => [
+                'success' => true
             ]]);
         }
     }

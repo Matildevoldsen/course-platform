@@ -15,7 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/register', 'Auth\RegisterUserController@store');
+Route::post('/verify', 'Auth\RegisterUserController@verify');
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/lesson/{slug}', 'Courses\LessonController@index');
+
+Route::get('/courses/{slug}', 'Courses\CourseController@index');
+Route::get('/course/all', 'Courses\CourseController@all');
+
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+});
+
+Route::middleware(['auth:sanctum', 'admin'])->group(function () {
+    Route::post('/course/new', 'Courses\CourseController@store');
 });

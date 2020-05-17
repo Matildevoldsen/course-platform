@@ -49,6 +49,7 @@ export default {
     '@nuxtjs/auth'
   ],
   auth: {
+
     strategies: {
       local: {
         endpoints: {
