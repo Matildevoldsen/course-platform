@@ -26,8 +26,17 @@
 
   export default {
     components: {Card, container},
-    mounted() {
-      this.$store.dispatch('courses/getCourse', this.$route.params.slug)
+    async mounted() {
+      await this.$store.dispatch('courses/getCourse', this.$route.params.slug)
+
+      if (await this.course.redirect == true) {
+        await this.$notification.open({
+          message: 'Error',
+          description: this.course.errors.root,
+        });
+
+        await this.$router.back();
+      }
     },
     computed: {
       ...mapState({
