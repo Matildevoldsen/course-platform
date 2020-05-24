@@ -37,4 +37,4 @@ In order to setup the frontend code please install the dependinces using ``npm i
 
 ### License
 
-This project is licensed under the MIT license - see the [LICENSE.MD](https://github.com/Matildevoldsen/course-platform/blob/master/license.md) for details.
+This project is licensed under the MIT license - see the [LICENSE.MD](https://github.com/Matildevoldsen/course-platform/blob/master/LICENSE.md) for details.
