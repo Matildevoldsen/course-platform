@@ -24,3 +24,17 @@ To run the backend code please use Laravel's in-built ``php artisan serve`` func
 #### Frontend
 
 In order to setup the frontend code please install the dependinces using ``npm install``. To run the frontend please use ``npm run dev``
+
+### Built With
+
+- [Laravel 7](https://laravel.com/docs/7.x) - backend framework.
+- [NuxtJS](http://nuxtjs.org/) - frontend framework.
+- Designed with [Ant Design Vue](https://www.antdv.com/).
+
+### Authors
+
+*Matilde Wittrup* - Initial Work - Wimm Media and coding tutorials on [YouTube](youtube.com/c/matildewittrup).
+
+### License
+
+This project is licensed under the MIT license - see the [LICENSE.MD](https://github.com/Matildevoldsen/course-platform/blob/master/license.md) for details.
