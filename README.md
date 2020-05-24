@@ -6,7 +6,7 @@ Course platform built with Laravel 7 and NuxtJS. This is the official repo for [
 To get started please ensure you have the following installed:
 
 - Composer
-- NPM and NODEJS
+- NPM and NodeJS
 - PHP 7.2.5 or newer.
 
 ### Installing

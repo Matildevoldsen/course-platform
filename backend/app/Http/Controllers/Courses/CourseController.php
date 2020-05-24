@@ -11,7 +11,7 @@ class CourseController extends Controller
 {
     public function index($slug)
     {
-        $course = Course::where('slug', '=', $slug)->first();
+        $course = Course::where('slug', '=', $slug);
 
         if ($course) {
             return new CourseResource($course->first());

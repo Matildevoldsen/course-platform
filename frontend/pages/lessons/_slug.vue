@@ -1,8 +1,8 @@
 <template>
-  <div id="course" v-if="course">
+  <div id="course" v-if="lesson">
     <section class="header">
-      <h1>{{ course.title }}</h1>
-      <p>{{ course.description }}</p>
+      <h1>{{ lesson.title }}</h1>
+      <p>{{ lesson.description }}</p>
     </section>
     <section class="lessons">
       <container>
