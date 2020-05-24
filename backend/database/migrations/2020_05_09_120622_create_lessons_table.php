@@ -20,7 +20,7 @@ class CreateLessonsTable extends Migration
             $table->string('file');
             $table->string('file_ext');
             $table->integer('order');
-            $table->integer('course_id')->unsigned()->index();
+            $table->biginteger('course_id')->unsigned()->index();
             $table->timestamps();
 
             $table->foreign('course_id')->references('id')->on('courses');
