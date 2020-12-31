@@ -13,10 +13,12 @@
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^v8.0.4",
+        "laravel/jetstream": "^1.6",
         "laravel/legacy-factories": "^1.1",
-        "laravel/sanctum": "^v2.8.2",
+        "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^v3.1.0"
+        "laravel/ui": "^v3.1.0",
+        "livewire/livewire": "^2.0"
     },
     "require-dev": {
         "facade/ignition": "^2.3.8",

@@ -1,6 +1,6 @@
 # Course Platform
 
-Course platform built with Laravel 8 and NuxtJS. This is the official repo for [How to build a course platform with NuxtJS, Laravel 7 and Stripe](https://www.youtube.com/watch?v=xS4Om2ZSu2o&list=PLjCZ5YN4Hlacehn798-qep4yXDcL4oF-x).
+Course platform built with Laravel 8 and NuxtJS. This is the official repo for [How to build a course platform with NuxtJS, Laravel 8 and Stripe](https://www.youtube.com/watch?v=xS4Om2ZSu2o&list=PLjCZ5YN4Hlacehn798-qep4yXDcL4oF-x).
 
 ## Getting Started
 To get started please ensure you have the following installed:
@@ -23,6 +23,26 @@ To run the backend code please use Laravel's in-built ``php artisan serve`` func
 
 ### .env File
 Please ensure that you copy .env.example and configure the database and email settings to your preference. Additionally, you should add ``SESSION_DOMAIN=localhost`` for local hosting and change it to your backend domain name when published.
+
+### Are you upgrading from Laravel 7 to 8?
+
+I'm aware certain subscribers of my channel might not have upgraded to Laravel 8, and while composer.json reflects the upgrades in here you might not want to clone the project to disrupt changes you have made. Therefore, I am providing a step-by-step guide on YouTube as well as in the README file:
+
+- 1st) Follow all these steps in here https://laravel.com/docs/8.x/upgrade, perhaps copy and paste composer.json file from here.
+- 2nd) If you haven't already installed jetstream please run this command ``composer require laravel/jetstream``
+- 3rd) Install livewire ``php artisan jetstream:install livewire``
+- 4th) You might encounter a bug if you don't add the following code to ``App/Providers/AppServiceProvider.php``:
+Inside the file add:
+```php
+    use Illuminate\Support\Facades\Schema; //Add below namespace
+
+    public function boot()
+    {
+        Schema::defaultstringLength(191);
+    }
+```
+- 5th) Migrate changes to reflect on your database ``php artisan migrate``
+
 
 ## Frontend
 
