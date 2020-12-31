@@ -12,15 +12,15 @@
   },
   "dependencies": {
     "@nuxtjs/auth": "^4.9.1",
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/dotenv": "^1.4.0",
-    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/axios": "^5.12.4",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/pwa": "^3.3.3",
     "@nuxtjs/style-resources": "^1.0.0",
-    "ant-design-vue": "^1.1.10",
-    "node-sass": "^4.13.1",
-    "nuxt": "^2.12.2",
-    "sass-loader": "^8.0.2",
-    "vue-core-video-player": "^0.1.9"
+    "ant-design-vue": "^1.7.2",
+    "node-sass": "^5.0.0",
+    "nuxt": "^2.14.12",
+    "sass-loader": "^10.1.0",
+    "vue-core-video-player": "^0.2.0"
   },
   "devDependencies": {}
 }
