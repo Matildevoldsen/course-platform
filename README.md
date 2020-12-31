@@ -1,6 +1,6 @@
 # Course Platform
 
-Course platform built with Laravel 7 and NuxtJS. This is the official repo for [How to build a course platform with NuxtJS, Laravel 7 and Stripe](https://www.youtube.com/watch?v=xS4Om2ZSu2o&list=PLjCZ5YN4Hlacehn798-qep4yXDcL4oF-x).
+Course platform built with Laravel 8 and NuxtJS. This is the official repo for [How to build a course platform with NuxtJS, Laravel 7 and Stripe](https://www.youtube.com/watch?v=xS4Om2ZSu2o&list=PLjCZ5YN4Hlacehn798-qep4yXDcL4oF-x).
 
 ## Getting Started
 To get started please ensure you have the following installed:
@@ -9,9 +9,9 @@ To get started please ensure you have the following installed:
 - NPM and NodeJS
 - PHP 7.2.5 or newer.
 
-### Installing
+# Installing
 
-#### Backend
+## Backend
 In order to install it please clone the repo. Then in the backend directory run these commands and ensure to have set up database configuration in .env file:
 
 ```
@@ -21,13 +21,15 @@ php artisan migrate
 
 To run the backend code please use Laravel's in-built ``php artisan serve`` function to run it locally.
 
-#### Frontend
+### .env File
+Please ensure that you copy .env.example and configure the database and email settings to your preference. Additionally, you should add ``SESSION_DOMAIN=localhost`` for local hosting and change it to your backend domain name when published.
+
+## Frontend
 
 In order to setup the frontend code please install the dependinces using ``npm install``. To run the frontend please use ``npm run dev``
-
 ### Built With
 
-- [Laravel 7](https://laravel.com/docs/7.x) - backend framework.
+- [Laravel 8](https://laravel.com/docs/8.x) - backend framework.
 - [NuxtJS](http://nuxtjs.org/) - frontend framework.
 - Designed with [Ant Design Vue](https://www.antdv.com/).
 
